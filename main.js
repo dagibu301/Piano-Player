@@ -9,6 +9,11 @@ const A = document.getElementById("a");
 const B = document.getElementById("b");
 const C_O = document.getElementById("c-o");
 
+playAudio = note => {
+    note.play();
+  }
+
+
 // The keys and notes variables store the piano keys
 const keys = ['c-key', 'd-key', 'e-key', 'f-key', 'g-key', 'a-key', 'b-key', 'high-c-key', 'c-sharp-key', 'd-sharp-key', 'f-sharp-key', 'g-sharp-key', 'a-sharp-key'];
 const notes = [];
@@ -34,6 +39,8 @@ let eventAssignment = note => {
 
     note.onmouseup = () => {
         keyReturn(event);
+        const key = event.target.querySelector('section').innerHTML;
+        playAudio(document.getElementById(key));
     }
 }
 
@@ -104,12 +111,6 @@ nextThree.onclick = () => {
 
     lastLyric.style.display = 'none';
 }
-
-
-
-function playAudio() {
-    x.play();
-  }
 
 // This is the event handler property and function for the startOver button
 startOver.onclick = function() {
