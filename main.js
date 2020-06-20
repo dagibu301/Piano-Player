@@ -39,6 +39,9 @@ let eventAssignment = note => {
 
     note.onmouseup = () => {
         keyReturn(event);
+    }
+
+    note.onclick = () => {
         const key = event.target.querySelector('section').innerHTML;
         playAudio(document.getElementById(key));
     }
