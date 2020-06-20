@@ -46,12 +46,36 @@ startOver.hidden= true;
 
 // anonymous event handler property and function for the first progress button
 
+nextOne.onclick = () => {
+    nextOne.hidden = true;
+    nextTwo.hidden = false;
+    document.getElementById('letter-note-five').innerHTML = 'D';
+    document.getElementById('letter-note-six').innerHTML = 'C';
+}
 
 // anonymous event handler property and function for the second progress button
+
+nextTwo.onclick = () => {
+    nextThree.hidden = false;
+    nextTwo.hidden = true;
+    document.getElementById('word-five').innerHTML = 'DEAR';
+    document.getElementById('word-six').innerHTML = 'FRI-';
+
+    document.getElementById('letter-note-three').innerHTML = 'G';
+    document.getElementById('letter-note-four').innerHTML = 'E';
+    document.getElementById('letter-note-five').innerHTML = 'C';
+    document.getElementById('letter-note-six').innerHTML = 'B';
+
+    lastLyric.style.display = 'inline-block';
+}
 
 
 // anonymous event handler property and function for the third progress button
 
+nextThree.onclick = () => {
+
+
+}
 
 // This is the event handler property and function for the startOver button
 startOver.onclick = function() {
