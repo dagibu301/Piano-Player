@@ -1,3 +1,14 @@
+// Audios
+
+const C = document.getElementById("c");
+const D = document.getElementById("d");
+const E = document.getElementById("e");
+const F = document.getElementById("f");
+const G = document.getElementById("g");
+const A = document.getElementById("a");
+const B = document.getElementById("b");
+const C_O = document.getElementById("c-o");
+
 // The keys and notes variables store the piano keys
 const keys = ['c-key', 'd-key', 'e-key', 'f-key', 'g-key', 'a-key', 'b-key', 'high-c-key', 'c-sharp-key', 'd-sharp-key', 'f-sharp-key', 'g-sharp-key', 'a-sharp-key'];
 const notes = [];
@@ -51,6 +62,7 @@ nextOne.onclick = () => {
     nextTwo.hidden = false;
     document.getElementById('letter-note-five').innerHTML = 'D';
     document.getElementById('letter-note-six').innerHTML = 'C';
+
 }
 
 // anonymous event handler property and function for the second progress button
@@ -73,9 +85,31 @@ nextTwo.onclick = () => {
 // anonymous event handler property and function for the third progress button
 
 nextThree.onclick = () => {
+    startOver.hidden = false;
+    nextThree.hidden = true;
 
+    document.getElementById('word-one').innerHTML = 'HAP-';
+    document.getElementById('word-two').innerHTML = 'PY';
+    document.getElementById('word-three').innerHTML = 'BIRTH';
+    document.getElementById('word-four').innerHTML = 'DAY';
+    document.getElementById('word-five').innerHTML = 'TO';
+    document.getElementById('word-six').innerHTML = 'YOU';
 
+    document.getElementById('letter-note-one').innerHTML = 'F';
+    document.getElementById('letter-note-two').innerHTML = 'F';
+    document.getElementById('letter-note-three').innerHTML = 'E';
+    document.getElementById('letter-note-four').innerHTML = 'C';
+    document.getElementById('letter-note-five').innerHTML = 'D';
+    document.getElementById('letter-note-six').innerHTML = 'C';
+
+    lastLyric.style.display = 'none';
 }
+
+
+
+function playAudio() {
+    x.play();
+  }
 
 // This is the event handler property and function for the startOver button
 startOver.onclick = function() {
