@@ -1,4 +1,4 @@
-# Eco Location :rocket:
+# Piano Player
 
 ## :rocket: Technologies used
 This project was developed using this technologies:
